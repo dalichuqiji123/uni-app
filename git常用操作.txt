@@ -1,0 +1,45 @@
+版本管理工具
+
+
+安装：从git官网下载安装、或者从软件管家中安装
+
+
+配置：
+
+git config --global user.name 'abc'
+git config --global user.email '448914712@qq.com'
+
+码云:本身就是免费
+gitlab是收费的:https://git.lug.ustc.edu.cn/users/sign_in
+
+
+加入项目组：你把git邮箱给到你的相关负责，让他把你加进去。
+
+创建分支：
+git branch --list  查看当前你本地所有的分支名
+git branch gdy
+git checkout gdy   从master分支中拉取代码到gdy分支
+可以开始工作了
+git add --all
+git commit -m '今天修改了购物车的bug'
+git push origin gdy
+
+
+分支合并及冲突处理：
+冲突产生的根本原因是，多个人修改了同一行代码。
+
+举个例子：把 gdy分支合并到 dev分支
+git checkout gdy
+git pull
+git checkout dev
+git merge gdy
+如果出现冲突，去到编辑中找到对就的代码文件，进行冲突合并（用谁的代码）
+git add .
+git commit -m '合并gdy分支'
+git push origin dev
+
+
+版本回退：
+git log
+git reset --hard a65e8b65020221ef3db94497c4c19d0ae421b7c6
+
